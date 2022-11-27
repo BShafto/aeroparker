@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Registration Screen</title>
+		<link th:href="@{/styles/AeroparkerStyle.css}" rel="stylesheet">
+	</head>
+	<body>
+		<h1>Aeroparker</h1>
+		<hr>
+		<h4>Registration Page</h4>
+		
+		<form action="#" th:action="@{./registerCustomer}" th:object="${command}" method="post">
+			<p>
+				<label for="b">Email Address : </label>
+				<input id="b" type="email" th:field="*{email_address}">
+			</p><br>
+			<p>
+				<label for="c">Title : </label>
+				<input id="c" type="text" th:field="*{title}">
+			</p><br>
+			<p>
+				<label for="d">First Name :</label>
+				<input id="d" type="text" th:field="*{first_name}">
+			</p><br>
+			<p>
+				<label for="e">Surname :</label>
+				<input id="e"type="text" th:field="*{last_name}">
+			</p><br>
+			<p>
+				<label for="f">Address Line 1 :</label>
+				<input id="f" type="text" th:field="*{address_line_1}">
+			</p><br>
+			<p>
+				<label for="g">Address Line 2 :</label>
+				<input id="g" type="text" th:field="*{address_line_2}">
+			</p><br>
+			<p>
+				<label for="h">City :</label>
+				<input id="h" type="text" th:field="*{city}">
+			</p><br>
+			<p>
+				<label for="i">Post Code :</label>
+				<input id="i" type="text" th:field="*{postcode}">
+			</p><br>
+			<p>
+				<label for="j">Phone Number :</label>
+				<input type="text" th:field="*{phone_number}">
+			</p><br>
+		
+			<input type="submit" value="Register">
+		</form>
+		<br><br>
+		<p th:text="${message}"></p>
+	</body>
+</html>
